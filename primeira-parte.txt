@@ -1,0 +1,88 @@
+
+//Acesso ao botao Sim
+let btnSim = document.getElementById("RAJADADEfe").value;
+let btnNao = document.getElementById("RAJADADEFE").value;
+let resultado = [];
+
+//Guardando a resposta num array e direcionando para a proxima pagina.
+let guardar = function(){
+    if(btnSim === "true" || btnSim === "false"){
+        let valor = resultado.push(btnSim);
+        console.log (valor);
+    }
+}
+
+almoço*************************************************************************
+
+//Acesso ao botao Sim
+let btnSim = document.getElementById("btnSim").value; //ok
+let btnNao = document.getElementById("btnNao").value; //ok
+let resultado = [];
+
+
+
+
+
+
+
+
+
+//resultado que guarda todos os valores
+//let resultadoFinal = ["jhkj"];
+
+//Guardando a resposta num array e direcionando para a proxima pagina.
+let guardarSim = function(){
+    if(btnSim === "true"){
+       let valor =  resultado.push(btnSim );//ok guarda o valor no array
+       //console.log(valor); 
+}   
+}
+
+let guardarNao = function(){
+    if(btnSim === "true"){
+       let valor =  resultado.push(btnSim );//ok guarda o valor no array
+       //console.log(valor); 
+}   
+}
+
+console.log (resultado);
+
+ 
+
+// let guardar = function () {
+//     if ( 
+//         //fluxoSim.push || fluxoNao.push = resultado;
+//     )
+// }
+
+
+manhãaa********************************************************
+
+//Acesso ao botao Sim
+let btnSim = document.getElementById("btnSim").value;
+let btnNao = document.getElementById("btnNao").value;
+let resultado = [];
+
+
+
+
+//resultado que guarda todos os valores
+//let resultadoFinal = ["jhkj"];
+
+//Guardando a resposta num array e direcionando para a proxima pagina.
+let guardar = function(){
+    if(btnSim === "true"){
+        let result = resultado.push;
+        console.log (result);
+}   
+}
+
+
+
+ 
+
+// let guardar = function () {
+//     if ( 
+//         //fluxoSim.push || fluxoNao.push = resultado;
+//     )
+// }
