@@ -18,6 +18,9 @@ let imageArray = [
 ]
 
 let i = 0;
+let totalImagens = 10;//***** criamos um array para contar as imagens
+
+
 // Aqui está colocando a imageArray[0] que é da pergunta-01:
 document.getElementById('image').src = 'assets/img/' + imageArray[i];
 
@@ -26,21 +29,29 @@ document.getElementById('image').src = 'assets/img/' + imageArray[i];
 
 //Guardando a resposta num array e direcionando para a proxima pagina.
 let guardarSim = function(){
-    if(btnSim === "true" || btnSim === "false"){
+    if(btnSim === "Sim" || btnSim === "Nao"){
         let valor = resultado.push(btnSim);
-        i++ // i = 1, então a imgArray[1] vai ser a pergunta-02
+        i; i <=totalImagens; i++
+        //i++ // i = 1, então a imgArray[1] vai ser a pergunta-02
         document.querySelector('#image').src = 'assets/img/' + imageArray[i];
         console.log (valor);
+    }
+    else{
+        window.location.replace("resultado.html");
     }
 }
 
 
 let guardarNao = function(){
-    if(btnNao === "true" || btnNao === "false"){
+    if(btnNao === "Sim" || btnNao === "Nao"){
         let valor = resultado.push(btnNao);
-        i++ // i = 1, então a imgArray[1] vai ser a pergunta-02
+        i; i <=totalImagens; i++
+        //i++ // i = 1, então a imgArray[1] vai ser a pergunta-02
         document.querySelector('#image').src = 'assets/img/' + imageArray[i];
         console.log (valor);
+    }
+    else{
+        window.location.replace("resultado.html");
     }
 }
 
