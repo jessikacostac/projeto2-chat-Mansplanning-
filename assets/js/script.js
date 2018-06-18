@@ -1,6 +1,6 @@
 //Acesso ao botao Sim
-let btnSim = document.getElementById("btnSim").value;
-let btnNao = document.getElementById("btnNao").value;
+//let btnSim = document.getElementById("btnSim");
+//let btnNao = document.getElementById("btnNao");
 let resultado = [];
 
 //Array para guardar img
@@ -21,6 +21,7 @@ let i = 0;
 let totalImagens = 9;//***** criamos um array para contar as imagens
 let acertos = 0;
 let guarda;
+let cont = 1;
 
 let respostasCorretas= new Array();
 
@@ -37,68 +38,43 @@ respostasCorretas[9]="sim";
 
 
 
-
-
 // A partir do momento que clica:
 //Guardando a resposta num array e direcionando para a proxima pagina.
-let guardarSim = function(){
-    if(i <totalImagens){
-        /////////VALIDAÇÂO/////////////
-        if(btnSim == respostasCorretas[i]){
-            guarda = "<p>"+i+" Acertou</p>";
+let resp = function(resposta){
+    if(i < totalImagens){
+        /////////VALIDAÇÂO////////////////////////////////////////////////////////////////////////////////////////////
+        if(resposta == respostasCorretas[i]){
+            guarda = "<p>"+cont+" Acertou</p>";
             acertos++;
         } else {
-            guarda = "<p style='color:red;'>"+i+" Errou!</p>";
+            guarda = "<p style='color:red;'>"+cont+" Errou!</p>";
         }
-        ///////////////////////////// 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////// 
         resultado.push(guarda);
         i++;
         document.querySelector('#image').src = 'assets/img/' + imageArray[i];
+        cont++;
         console.log(guarda);
                
-    } else if(i=totalImagens){
-        if(btnSim == respostasCorretas[i]){
-            guarda = "<p>"+i+" Acertou</p>";
+    } else if(i = totalImagens){
+        /////////VALIDAÇÂO////////////////////////////////////////////////////////////////////////////////////////////
+        if(resposta == respostasCorretas[i] ){
+            guarda = "<p>"+cont+" Acertou</p>";
             acertos++;
         } else {
-            guarda = "<p style='color:red;'>"+i+" Errou!</p>";
+            guarda = "<p style='color:red;'>"+cont+" Errou!</p>";
         }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         resultado.push(guarda);
         document.write(resultado);
         // window.location.replace("resultado.html");
         console.log(guarda);
+        cont++;
     }
 }
 
 //Guardando a resposta num array e direcionando para a proxima pagina.
-let guardarNao = function(){
-    if(i <totalImagens){
-        /////////VALIDAÇÂO/////////////
-        if(btnNao == respostasCorretas[i]){
-            guarda = "<p>"+i+" Acertou</p>";
-            acertos++;
-        } else {
-            guarda = "<p style='color:red;'> "+i+" Errou!</p>";
-        }
-        ///////////////////////////// 
-        resultado.push(guarda);
-        i++;
-        document.querySelector('#image').src = 'assets/img/' + imageArray[i];
-        console.log(guarda);
-               
-    } else if(i=totalImagens){
-        if(btnNao == respostasCorretas[i]){
-            guarda = "<p> "+i+"Acertou</p>";
-            acertos++;
-        } else {
-            guarda = "<p style='color:red;'> "+i+" Errou!</p>";
-        }
-        resultado.push(guarda);
-        document.write(resultado);
-        // window.location.replace("resultado.html");
-        console.log(guarda);
-    }
-}
+
 
 console.log(resultado);
 
